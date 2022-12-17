@@ -9,7 +9,6 @@ export const Shop = () => {
         <h1>Mega Shop</h1>
       </div>
       <div className="products">
-        {" "}
         {PRODUCTS.map((product) => (
           <Product data={product} />
         ))}
