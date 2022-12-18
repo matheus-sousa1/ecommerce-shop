@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { CartItem } from "./cart-item";
 import styles from "./cart.css";
 import { useNavigate } from "react-router-dom";
+import { ShoppingCartSimple } from "phosphor-react";
 
 export const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
@@ -14,7 +15,7 @@ export const Cart = () => {
   return (
     <div className="cart">
       <div>
-        <h1>Seu carrinho de Itens</h1>
+        <h1>Seu carrinho de itens</h1>
       </div>
       <div className="cartItems">
         {PRODUCTS.map((product) => {
@@ -23,11 +24,19 @@ export const Cart = () => {
           }
         })}
       </div>
-      <div className="checkout">
-        <p>Subtotal: R${totalAmount}</p>
-        <button onClick={() => navigate("/")}>Continuar comprando</button>
-        <button>Conferir</button>
-      </div>
+      {totalAmount > 0 ? (
+        <div className="checkout">
+          <p>Subtotal: R${totalAmount}</p>
+          <button onClick={() => navigate("/")}>Continuar comprando</button>
+          <button onClick={() => navigate("/request")}>Fechar pedido</button>
+        </div>
+      ) : (
+        <div className="cartEmpty">
+          <h1>
+            Seu carrinho está vázio <ShoppingCartSimple />
+          </h1>
+        </div>
+      )}
     </div>
   );
 };
