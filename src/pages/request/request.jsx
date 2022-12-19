@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./request.css";
 import { Loading } from "../../loading/loading";
+import { CheckCircle } from "phosphor-react";
 
 export const Request = () => {
   const [removeLoading, setRemoveLoading] = useState(false);
-  const [addMessage, setAddMessage] = useState();
 
   useEffect(() => {
     setTimeout(() => {
@@ -12,14 +12,16 @@ export const Request = () => {
     }, 2000);
   });
 
-  setTimeout(() => {
-    setAddMessage();
-  }, 2000);
-
   return (
-    <div>
+    <div className="sucess">
       {!removeLoading && <Loading />}
-      {addMessage && <h1>Pedido feito com sucesso</h1>}
+      {removeLoading && (
+        <div className="message">
+          <h1>
+            Pedido concluído <CheckCircle size={32} color="#0fe612" />{" "}
+          </h1>
+        </div>
+      )}
     </div>
   );
 };

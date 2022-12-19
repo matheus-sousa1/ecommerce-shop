@@ -8,7 +8,10 @@ export const Product = (props) => {
   const cartItemAmount = cartItems[id];
   return (
     <div className="product">
-      <img src={productImage} alt="image-product" />
+      <div className="imgProduct">
+        <img src={productImage} alt="photoProduct" />
+      </div>
+
       <div className="description">
         <p>
           <b>{productName}</b>
@@ -16,7 +19,7 @@ export const Product = (props) => {
         <p>R$ {price}</p>
 
         <button className="addToCartBttn" onClick={() => addToCart(id)}>
-          Adicionar No Carrinho{" "}
+          Adicionar No Carrinho
           {cartItemAmount > 0 && <> ({cartItemAmount}) </>}
         </button>
       </div>

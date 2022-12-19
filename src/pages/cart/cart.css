@@ -3,11 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 650px;
 }
 
 .cartItem {
   width: 700px;
-  height: 250px;
+  height: 300px;
   display: flex;
   align-items: center;
   box-shadow: 0px 3px 15px black;
@@ -47,7 +48,6 @@
 .cartEmpty {
   width: 600px;
   height: 300px;
-  border: 1px solid blue;
 }
 
 .cartEmpty h1 {

@@ -11,11 +11,13 @@
   margin-right: 50px;
   display: flex;
   align-items: center;
+  background-color: rgb(29, 27, 27);
 }
 
 .links a {
   text-decoration: none;
   color: white;
   margin-left: 20px;
+  background-color: rgb(29, 27, 27);
   font-size: 25px;
 }

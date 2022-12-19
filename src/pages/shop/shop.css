@@ -1,16 +1,4 @@
-.addToCartButton {
-  background-color: black;
-  border: 2pc solid black;
-  min-width: 100px;
-  padding: 5px 10px;
-  border-radius: 15px;
-}
-
-.addToCartButton:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
+/* shop.jsx */
 
 .shopTitle {
   margin-top: 100px;
@@ -26,24 +14,34 @@
   place-items: center;
 }
 
+/* product jsx*/
+
 .product {
   border-radius: 15px;
   width: 300px;
-  height: 350px;
+  height: 400px;
   margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  box-shadow: 0px 3px 15px black;
+  background-color: white;
 }
 
-.product img {
+.imgProduct img {
   width: 100px;
 }
 
-.product .description {
+.description {
   text-align: center;
+  background-color: white;
+  width: 50%;
+}
+
+.description p,
+b {
+  background: white;
 }
 
 .product:hover {
@@ -51,11 +49,13 @@
   cursor: pointer;
 }
 
+/*botão do jsx product*/
+
 .addToCartBttn {
   background-color: transparent;
   border: 2px solid black;
   min-width: 100px;
-  padding: 5px 10px;
+  padding: 1px 10px;
   border-radius: 15px;
 }
 
