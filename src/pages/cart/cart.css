@@ -54,3 +54,11 @@
   text-align: center;
   padding-top: 200px;
 }
+
+/* responsive */
+
+@media screen and (max-width: 1150px) {
+  .cartItem {
+    width: 400px;
+  }
+}

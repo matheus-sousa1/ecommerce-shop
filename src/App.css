@@ -3,3 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* responsive */
+
+@media screen and (max-width: 1600px) {
+  .App {
+    width: 100%;
+  }
+}

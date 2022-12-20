@@ -3,8 +3,13 @@
   height: 80px;
   background-color: rgb(29, 27, 27);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  gap: 0px 1400px;
+}
+
+.logo img {
+  width: 40px;
 }
 
 .links {
@@ -20,4 +25,29 @@
   margin-left: 20px;
   background-color: rgb(29, 27, 27);
   font-size: 25px;
+}
+
+/* responsive */
+@media screen and (max-width: 1600px) {
+  .navbar {
+    gap: 0px 1200px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .navbar {
+    gap: 0px 900px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .navbar {
+    gap: 0px 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    gap: 0px 300px;
+  }
 }
